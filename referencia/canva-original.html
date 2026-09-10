@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260910-05-2120d8a","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/c21197326e9a1154.telemetry_sdk.js" integrity="sha512-Aqwl+NmLtKBcMQM4HY+W9lmBHa+zP5MqSEuYfCjkzt4xeOSv2xNz81cCp7JyXBVrY+zojg5o94FHY/R31v2d3Q=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acantilado</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/efe904fe8a212716.data_sdk.js" integrity="sha512-oiO0pmn5llS1uDeB2l690YywxqOe/a0U1kzY6RGaLZXtyh9YjTk1CUoK/bJUugc1QbUaJMJ3IE1MtpNY5NBZCw=="></script>
+  <script src="/_sdk/6125e8aa3c264a2d.resizing_sdk.js" integrity="sha512-+j9iK2FF/yFSTU389rFqKj3v0s1ELh1r0aj3mqpsVRZujaeWi0WgN7jmTcWLcBq91dz3NCEyXqMtHbwpOxhDYg=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --paper:#F4EBDC; --ink:#2B2420; --bordeaux:#9C4A35; --storm:#33424D; --lavender:#9483A6; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { width:100%; margin:0; color:var(--ink); font-family:"DM Sans",sans-serif; overflow-x:hidden; transition:background-color .5s ease, color .5s ease; }
+    body.reading-mode { background-color:#1A1F26 !important; }
+    .display-font { font-family:"Fraunces",serif; }
+    .paper-grain {
+      background-color:var(--paper);
+      background-image:radial-gradient(circle at 18% 22%,rgba(156,74,53,.08) 0 1px,transparent 1.5px),radial-gradient(circle at 76% 58%,rgba(156,74,53,.055) 0 1px,transparent 1.5px);
+      background-size:20px 20px,27px 27px;
+    }
+    .nav-link { position:relative; color:var(--ink); transition:color .25s ease; }
+    .nav-link::after { content:""; position:absolute; bottom:-5px; left:0; width:100%; height:1px; background:var(--bordeaux); transform:scaleX(0); transform-origin:left; transition:transform .25s ease; }
+    .nav-link:hover,.nav-link:focus-visible { color:var(--bordeaux); }
+    .nav-link:hover::after,.nav-link:focus-visible::after { transform:scaleX(1); }
+    .focus-ring:focus-visible { outline:2px solid var(--bordeaux); outline-offset:4px; }
+    .chapter-card { border-top:1px solid rgba(43,36,32,.42); transition:transform .3s ease,background-color .3s ease; }
+    .chapter-card:last-child { border-bottom:1px solid rgba(43,36,32,.42); }
+    .chapter-card:hover { transform:translateX(8px); background:rgba(156,74,53,.06); }
+    .chapter-arrow { transition:transform .25s ease; }
+    .chapter-card:hover .chapter-arrow { transform:translateX(4px); }
+    .reader-panel { display:none; }
+    .reader-panel.is-active { display:block; animation:pageIn .45s ease both; }
+    @keyframes pageIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+    .reveal { animation:rise .7s ease both; }
+    @keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    .reader-shell { transition:max-width .3s ease, box-shadow .5s ease, background-color .5s ease; }
+    .reader-panel p[data-template-id^="reader-text-"] { transition:font-size .5s ease; }
+    .reading-mode .reader-shell { max-width:760px; box-shadow:0 0 0 1px rgba(244,235,220,.3), 0 18px 60px rgba(244,235,220,.2), 0 0 90px rgba(244,235,220,.12); }
+    .reading-mode .reader-panel p[data-template-id^="reader-text-"] { font-size:calc(1em + 1px) !important; }
+    .reading-mode .site-header,.reading-mode .hero-strip,.reading-mode .chapter-index,.reading-mode .about-section,.reading-mode .contact-section,.reading-mode .site-footer { opacity:.24; background-color:transparent !important; transition:opacity .3s ease,background-color .5s ease; }
+    .reading-mode #lector,.reading-mode #next-qr-notice { background-color:#1A1F26 !important; transition:background-color .5s ease; }
+    .reading-mode .site-header:hover,.reading-mode .hero-strip:hover,.reading-mode .chapter-index:hover,.reading-mode .about-section:hover,.reading-mode .contact-section:hover,.reading-mode .site-footer:hover { opacity:1; }
+    .mobile-menu-toggle,.mobile-menu { display:none; }
+    .mobile-menu-link { display:block; padding:14px 8px; color:var(--ink); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.13em; border-bottom:1px solid rgba(43,36,32,.16); }
+    .mobile-menu-link:last-child { border-bottom:0; }
+    @media (max-width:720px) {
+      .nav-links { display:none; }
+      .mobile-menu-toggle { display:inline-flex; }
+      .mobile-menu { display:flex; flex-direction:column; }
+      .mobile-menu.hidden { display:none; }
+      .hero-layout,.about-layout { grid-template-columns:1fr !important; }
+      .hero-image-wrap { min-height:280px; }
+      .reader-controls { flex-direction:column; align-items:stretch !important; }
+      .reader-controls button { justify-content:center; }
+    }
+  </style>
+ </head>
+ <body data-template-id="__page-root" class="w-full paper-grain" style="background: rgb(244, 235, 220);">
+  <header data-template-id="site-header" class="site-header canva-header sticky top-0 z-30 border-b border-[#2B2420]/35 bg-[#F4EBDC]/95" style="background: rgb(244, 235, 220);">
+   <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 md:px-10">
+    <a href="#inicio" class="focus-ring shrink-0 no-underline"> <span data-template-id="novel-name" class="canva-text display-font block font-semibold tracking-tight" style="color: rgb(156, 74, 53); font-weight: 600; font-style: normal; font-size: 24px;">Acantilado</span> <span data-template-id="novel-tagline" class="canva-text mt-1 block text-[10px] uppercase tracking-[.18em]" style="color: rgb(43, 36, 32); font-weight: 700; font-style: normal; font-size: 18px;">Una novela por QR</span> </a>
+    <nav aria-label="Navegación principal" class="nav-links flex items-center gap-7 text-xs font-semibold uppercase tracking-[.13em]">
+     <a data-template-id="nav-home" class="canva-link nav-link focus-ring" href="#inicio" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 18px;">Inicio</a> <a data-template-id="nav-chapters" class="canva-link nav-link focus-ring" href="#capitulos" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 18px;">Capítulos</a> <a data-template-id="nav-about" class="canva-link nav-link focus-ring" href="#sobre" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 18px;">Sobre la novela</a> <a data-template-id="nav-contact" class="canva-link nav-link focus-ring" href="#contacto" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 18px;">Contacto</a>
+    </nav><button id="mobile-menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu" class="mobile-menu-toggle focus-ring inline-flex items-center justify-center rounded-md border border-[#9C4A35] px-3 py-2 text-2xl leading-none text-[#9C4A35]">☰</button><a href="#capitulos" aria-label="Ir a capítulos" class="focus-ring inline-flex rounded-full border border-[#9C4A35] p-2 text-[#9C4A35] transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]"><i data-lucide="book-open" class="h-4 w-4"></i></a>
+   </div>
+   <nav id="mobile-menu" aria-label="Menú móvil" class="mobile-menu hidden border-t border-[#2B2420]/25 px-5 pb-4 pt-2 md:px-10">
+    <a data-template-id="nav-home" class="canva-link mobile-menu-link focus-ring" href="#inicio" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 18px;">Inicio</a><a data-template-id="nav-chapters" class="canva-link mobile-menu-link focus-ring" href="#capitulos" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 18px;">Capítulos</a><a data-template-id="nav-about" class="canva-link mobile-menu-link focus-ring" href="#sobre" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 18px;">Sobre la novela</a><a data-template-id="nav-contact" class="canva-link mobile-menu-link focus-ring" href="#contacto" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 18px;">Contacto</a>
+   </nav>
+  </header>
+  <main>
+   <section id="inicio" class="hero-strip overflow-hidden bg-[#F4EBDC]">
+    <div class="hero-layout mx-auto grid max-w-7xl grid-cols-2 items-stretch px-5 md:px-10">
+     <div class="reveal flex min-h-[520px] flex-col justify-center py-16 md:pr-16">
+      <p data-template-id="hero-eyebrow" class="canva-text mb-6 text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Novela contemporánea · Lectura en curso</p>
+      <h1 data-template-id="hero-title" class="canva-text display-font max-w-2xl leading-[.98]" style="color: rgb(156, 74, 53); font-weight: 600; font-style: normal; font-size: 54px;">Acantilado</h1>
+      <p data-template-id="hero-subtitle" class="canva-text mt-7 max-w-lg leading-relaxed" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 19px; line-height: 1.6;">Iris llega a un pueblo costero arrastrando una pérdida que no sabe nombrar. Algo en la costa empieza a encenderse cuando ella más lo necesita, y ya no sabe si el mundo le está hablando, o si es ella la que se está apagando.</p>
+      <p data-template-id="hero-trust-note" class="canva-text mt-4 max-w-lg text-xs italic leading-relaxed opacity-75" style="color: rgb(107, 98, 91); font-weight: 400; font-style: italic; font-size: 16px; line-height: 1.45;">Es real: esto es una novela que reparto capítulo a capítulo por las calles de Buenos Aires mediante QR. Leela gratis, sin dejar ningún dato tuyo.</p>
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+       <button data-template-id="hero-cta" id="read-first" type="button" class="canva-button focus-ring inline-flex items-center gap-3 rounded-full px-6 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:shadow-lg" style="background: rgb(156, 74, 53); color: rgb(244, 235, 220); font-weight: 700;"><i data-lucide="arrow-down-right" class="h-4 w-4"></i><span data-template-id="hero-cta-label" class="canva-text" style="color: rgb(244, 235, 220); font-weight: 700; font-style: normal; font-size: 18px;">Leer el primer capítulo</span></button> <a href="#next-qr-notice" class="focus-ring text-xs uppercase tracking-[.14em] no-underline"><span data-template-id="hero-note" class="canva-text" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Ubicación de QR</span></a>
+      </div>
+     </div>
+     <div class="hero-image-wrap relative my-7 overflow-hidden rounded-sm border border-[#2B2420]/25 md:my-10">
+      <img data-template-id="hero-image" loading="lazy" class="canva-image h-full min-h-[420px] w-full object-cover" src="canva://MAHUp4tQ8Eg/1" alt="pexels-francesco-ungaro-33660235.jpg">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#2B2420]/65 via-transparent to-transparent"></div>
+      <p data-template-id="hero-image-caption" class="canva-text absolute bottom-5 left-5 text-xs italic" style="color: rgb(244, 235, 220); font-weight: 400; font-style: italic; font-size: 18px;">Puede haber fantasmas en la luz</p>
+     </div>
+    </div>
+   </section>
+   <section id="capitulos" data-template-id="chapters-section" class="chapter-index canva-section border-y border-[#2B2420]/45 py-20" style="background: rgb(244, 235, 220);">
+    <div class="mx-auto max-w-7xl px-5 md:px-10">
+     <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+      <div>
+       <p data-template-id="chapters-kicker" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Índice de lectura</p>
+       <h2 data-template-id="chapters-title" class="canva-text display-font mt-3" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">Capítulos</h2>
+      </div>
+      <p data-template-id="chapters-intro" class="canva-text max-w-md text-sm leading-relaxed" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">Seis fragmentos para quedarse con Iris al borde del acantilado, reconocer el olor de lo que ya se fue y seguir una luz que no debería estar encendida.</p>
+     </div>
+     <div class="mx-auto max-w-5xl">
+      <article data-template-id="chapter-card-1" class="chapter-card canva-card flex items-center justify-between gap-5 py-7" style="background: transparent;"><span data-template-id="chapter-number-1" class="canva-text display-font text-3xl" style="color: rgb(156, 74, 53); font-weight: 400; font-style: normal; font-size: 18px;">01</span>
+       <div class="flex min-w-0 flex-1 items-center justify-between gap-4">
+        <h3 data-template-id="chapter-title-1" class="canva-text display-font" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 21px;">El efecto del observador</h3><button data-template-id="chapter-button-1" data-chapter="1" type="button" aria-label="Leer capítulo 1" class="canva-button focus-ring chapter-open inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#9C4A35] p-0 transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]" style="background: transparent; color: rgb(156, 74, 53); font-weight: 700;"><i data-lucide="arrow-right" class="chapter-arrow h-4 w-4"></i><span data-template-id="chapter-button-label-1" class="canva-text sr-only" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Leer capítulo</span></button>
+       </div>
+      </article>
+      <article data-template-id="chapter-card-2" class="chapter-card canva-card flex items-center justify-between gap-5 py-7" style="background: transparent;"><span data-template-id="chapter-number-2" class="canva-text display-font text-3xl" style="color: rgb(156, 74, 53); font-weight: 400; font-style: normal; font-size: 18px;">02</span>
+       <div class="flex min-w-0 flex-1 items-center justify-between gap-4">
+        <h3 data-template-id="chapter-title-2" class="canva-text display-font" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 21px;">La luz puede susurrarte historias</h3><button data-template-id="chapter-button-2" data-chapter="2" type="button" aria-label="Leer capítulo 2" class="canva-button focus-ring chapter-open inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#9C4A35] p-0 transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]" style="background: transparent; color: rgb(156, 74, 53); font-weight: 700;"><i data-lucide="arrow-right" class="chapter-arrow h-4 w-4"></i><span data-template-id="chapter-button-label-2" class="canva-text sr-only" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Leer capítulo</span></button>
+       </div>
+      </article>
+      <article data-template-id="chapter-card-3" class="chapter-card canva-card flex items-center justify-between gap-5 py-7" style="background: transparent;"><span data-template-id="chapter-number-3" class="canva-text display-font text-3xl" style="color: rgb(156, 74, 53); font-weight: 400; font-style: normal; font-size: 18px;">03</span>
+       <div class="flex min-w-0 flex-1 items-center justify-between gap-4">
+        <h3 data-template-id="chapter-title-3" class="canva-text display-font" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 21px;">Tal vez volvamos a vernos</h3><button data-template-id="chapter-button-3" data-chapter="3" type="button" aria-label="Leer capítulo 3" class="canva-button focus-ring chapter-open inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#9C4A35] p-0 transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]" style="background: transparent; color: rgb(156, 74, 53); font-weight: 700;"><i data-lucide="arrow-right" class="chapter-arrow h-4 w-4"></i><span data-template-id="chapter-button-label-3" class="canva-text sr-only" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Leer capítulo</span></button>
+       </div>
+      </article>
+      <article data-template-id="chapter-card-4" class="chapter-card canva-card flex items-center justify-between gap-5 py-7" style="background: transparent;"><span data-template-id="chapter-number-4" class="canva-text display-font text-3xl" style="color: rgb(156, 74, 53); font-weight: 400; font-style: normal; font-size: 18px;">04</span>
+       <div class="flex min-w-0 flex-1 items-center justify-between gap-4">
+        <h3 data-template-id="chapter-title-4" class="canva-text display-font" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 21px;">El chirrido que hacen las ruedas de un avión huele a lavanda</h3><button data-template-id="chapter-button-4" data-chapter="4" type="button" aria-label="Leer capítulo 4" class="canva-button focus-ring chapter-open inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#9C4A35] p-0 transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]" style="background: transparent; color: rgb(156, 74, 53); font-weight: 700;"><i data-lucide="arrow-right" class="chapter-arrow h-4 w-4"></i><span data-template-id="chapter-button-label-4" class="canva-text sr-only" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Leer capítulo</span></button>
+       </div>
+      </article>
+      <article data-template-id="chapter-card-5" class="chapter-card canva-card flex items-center justify-between gap-5 py-7" style="background: transparent;"><span data-template-id="chapter-number-5" class="canva-text display-font text-3xl" style="color: rgb(156, 74, 53); font-weight: 400; font-style: normal; font-size: 18px;">05</span>
+       <div class="flex min-w-0 flex-1 items-center justify-between gap-4">
+        <h3 data-template-id="chapter-title-5" class="canva-text display-font" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 21px;">El tejo</h3><button data-template-id="chapter-button-5" data-chapter="5" type="button" aria-label="Leer capítulo 5" class="canva-button focus-ring chapter-open inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#9C4A35] p-0 transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]" style="background: transparent; color: rgb(156, 74, 53); font-weight: 700;"><i data-lucide="arrow-right" class="chapter-arrow h-4 w-4"></i><span data-template-id="chapter-button-label-5" class="canva-text sr-only" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Leer capítulo</span></button>
+       </div>
+      </article>
+      <article data-template-id="chapter-card-6" class="chapter-card canva-card flex items-center justify-between gap-5 py-7" style="background: transparent;"><span data-template-id="chapter-number-6" class="canva-text display-font text-3xl" style="color: rgb(156, 74, 53); font-weight: 400; font-style: normal; font-size: 18px;">06</span>
+       <div class="flex min-w-0 flex-1 items-center justify-between gap-4">
+        <h3 data-template-id="chapter-title-6" class="canva-text display-font" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 21px;">Puentes entre la vida y la muerte</h3><button data-template-id="chapter-button-6" data-chapter="6" type="button" aria-label="Leer capítulo 6" class="canva-button focus-ring chapter-open inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#9C4A35] p-0 transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]" style="background: transparent; color: rgb(156, 74, 53); font-weight: 700;"><i data-lucide="arrow-right" class="chapter-arrow h-4 w-4"></i><span data-template-id="chapter-button-label-6" class="canva-text sr-only" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Leer capítulo</span></button>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section id="lector" class="bg-[#F4EBDC] py-20 md:py-28">
+    <div class="mx-auto max-w-7xl px-5 md:px-10">
+     <div class="mb-9 flex items-center justify-between border-b border-[#2B2420]/45 pb-5">
+      <p data-template-id="reader-label" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Sala de lectura</p><button data-template-id="reading-mode-button" id="reading-mode-toggle" type="button" class="canva-button focus-ring inline-flex items-center gap-2 rounded-full border border-[#9C4A35] px-4 py-2 text-xs font-bold uppercase tracking-[.12em] transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]" style="background: transparent; color: rgb(156, 74, 53); font-weight: 700;"><i data-lucide="focus" class="h-4 w-4"></i><span data-template-id="reading-mode-label" class="canva-text" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Modo lectura</span></button>
+     </div>
+     <div class="reader-shell mx-auto max-w-4xl rounded-sm border border-[#2B2420]/25 bg-[#F4EBDC] px-6 py-12 transition-all duration-300 md:px-16 md:py-16">
+      <article class="reader-panel is-active" data-reader="1">
+       <p data-template-id="reader-number-1" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Capítulo 01</p>
+       <h2 data-template-id="reader-title-1" class="canva-text display-font mt-4" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">El efecto del observador</h2>
+       <div class="my-9 h-px w-16 bg-[#9C4A35]"></div>
+       <p data-template-id="reader-text-1" class="canva-text display-font max-w-2xl leading-[1.9]" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.9;">Hay una teoría físico-cuántica llamada "El Efecto del Observador", y habla de que el Universo se rige por infinitas posibilidades coexistiendo solapadas al mismo tiempo.
+Eugene Wigner decía que es como si el Universo tuviera muchas versiones posibles de una misma historia, y no es hasta que alguien observa que él elige una de las opciones del guion y la realidad se concreta.
+En definitiva, que el mundo no está enteramente definido hasta que alguien lo experimenta.
+A los 18 años aprendí que tenemos la posibilidad de alterar la percepción de la realidad, y que podemos inducir al cerebro a oler un color o a escuchar una imagen. Tiempo después entendí que no se necesita una droga para hacerlo, porque cuando te detienes a ver el resto del mundo, también se puede ver el momento en que se crean y se distorsionan y se mezclan entre sí todas esas versiones y mundos diferentes.
+
+El pasado 29 de octubre, cuando me detuve, necesité con todas mis fuerzas hablar con Wigner. Quería preguntarle si en algún momento creyó que nuestra forma de observar influye en la historia, o si igual es siempre el Universo el que arroja los dados aleatoriamente para definirla.
+No funcionó escribir ni subir el volumen de la música, así que me cubrí con la capucha, subí al auto, metí la llave en el encendido y envolví el volante frío con mis manos.
+Lo más cercano que tenía eran los acantilados de Beachy Head.
+
+Conduje hasta que al sol se lo tragó la oscuridad y yo llegué a los pies de donde termina la tierra. Detuve el auto a un costado de la ruta, que quedó inclinado sobre el pasto por la pendiente de la colina, y con los labios inundados por la sal de mis ojos sentí el cuerpo roto.
+Mi andar era el sonido de cientos de ramas quebrándose.
+
+Dejando abierta la puerta del auto tras de mí, caminé hasta llegar al borde filoso de piedra y color tiza que se alza a 162 metros de altura. El viento se colaba entre mi pelo, entre mi abrigo, entre mis pensamientos.
+Recordé la madrugada que Kaelin volvió de Londres. Recordé el llamado. Recordé a Owen. Y supe que mi mente se empeñaba en encontrar algo que me hiciera alejarme de ahí. Recordé el diario. A mis padres. El faro. Y recordé lo frío que puede sentirse el aire al respirarlo.
+Vi mi camino como las marcas que dejan las hormigas en la tierra de tanto recorrer los mismos lugares.
+Y sonreí triste cuando pensé en que no había más daño que pudiera hacerse, porque tenía el control del mundo bajo mis pies.
+Los acantilados de Beachy Head son muy ventosos, sus ráfagas pueden superar los 100 km/h. Y eso hace más fácil que el calor humano se deshilache entre los dedos.
+
+No había luz en el lugar de la piedra, en el verdadero borde del acantilado donde ya no queda lugar para la vida. Pero me dije que no tenía por qué temer al enfrentar el abismo que tantas veces había enfrentado.
+Ya no quedaban lágrimas. Tenía los brazos paralizados y solo el azul de la campera se sacudía con violencia como una bandera sin asta.
+
+Mi mente volvió a esa última semana con Owen antes de llegar a East Dean. Volvió al reflejo de sus ojos en mi copa de vino. Volvió al sonido que hacía con su boca cuando discutíamos. Volvió a la mancha que quedó en el sillón.
+Las estrellas me vieron desintegrarme como el risco con el golpe de las olas, y ese sonido fue llenando todos los espacios.
+Tomé ventaja del segundo de paz engañosa que suele dar la mente, cerré los ojos y dejé que el viento inclinara mi cuerpo hacia la caída. Mis oídos se taparon. Y el silencio se volvió negro.
+Fue en ese momento cuando un fogonazo de luz atravesó mis párpados cerrados, y en una milésima de segundo me hice consciente de mi cuerpo.
+Aún estaba sobre la tierra, así que me detuve afirmando los pies al suelo. Traté de mantener el equilibrio y abrí los ojos buscando distinguir una nube cargada, pero solo las estrellas seguían ahí, con la oscuridad densa, inquebrantable.
+Entonces volvió a aparecer la luz. Otro flash a segundos del primero, nítido.
+Sentí un nudo en el estómago.
+
+Volví a cerrar los ojos, pero la luz apareció otra vez. Sin sonido. Sin tormenta. Sin razón.
+Intenté apretar los puños y noté que mis manos ya estaban lo suficientemente entumecidas como para hacerlo. Empecé a asustarme. Traté de mover los dedos de los pies dentro de las zapatillas, pero no respondieron. El miedo me sacudió, un escalofrío helado recorrió todo mi cuerpo por la posibilidad de quedar atrapada en ese borde, y me pregunté si era posible que la luz viniese del faro.
+Recordé el día que lo conocí, el subte, la poca luz, la primera vez que vi su heterocromía.
+
+Mi respiración empezó a agitarse. Forcé la garganta y grité. Di un grito ahogado, ronco, el grito de una criatura adormecida. Nadie respondió.
+Otra vez, la luz. La vi alumbrar todo el acantilado con claridad, arrastrándose por el agua con un brillo fuera de lo común.
+Conseguí recomponer mis piernas y di un paso, no hacia el vacío sino hacia el lugar de donde venía la luz. Logré moverme unos metros lentamente, con la visión borrosa, y fui hacia algo que no supe en ese momento si era real o un espejismo.
+
+Al caminar una vez más en contra del viento, el cabello golpeó mi rostro, el césped volvió a acariciarme los tobillos mientras la luz, el flash, recorrió otra vez todo el lugar, y pude verlo iluminarme a mí, al acantilado, al océano, al cielo, y a toda esa oscuridad.
+Seguí avanzando hasta que mis piernas se hicieron débiles y no pude sostener el peso de mi cuerpo sobre ellas. 
+
+Me desplomé.
+</p>
+       <p data-template-id="reader-closing-note" class="canva-text mt-6 max-w-2xl text-sm italic leading-relaxed opacity-75" style="color: rgb(107, 98, 91); font-weight: 400; font-style: italic; font-size: 16px; line-height: 1.45;">Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.</p>
+      </article>
+      <article class="reader-panel" data-reader="2">
+       <p data-template-id="reader-number-2" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Capítulo 02</p>
+       <h2 data-template-id="reader-title-2" class="canva-text display-font mt-4" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">El olor de la lluvia</h2>
+       <div class="my-9 h-px w-16 bg-[#9C4A35]"></div>
+       <p data-template-id="reader-text-2" class="canva-text display-font max-w-2xl leading-[1.9]" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.9;">La lluvia llegó antes de que Tomás terminara de cruzar la plaza. Corrió hacia ella sin paraguas, igual que cuando tenían diecisiete años, y por un instante Alma pensó que el tiempo no había hecho más que doblarse sobre sí mismo.</p>
+      </article>
+      <article class="reader-panel" data-reader="3">
+       <p data-template-id="reader-number-3" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Capítulo 03</p>
+       <h2 data-template-id="reader-title-3" class="canva-text display-font mt-4" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">Cartas sin remitente</h2>
+       <div class="my-9 h-px w-16 bg-[#9C4A35]"></div>
+       <p data-template-id="reader-text-3" class="canva-text display-font max-w-2xl leading-[1.9]" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.9;">El primer sobre tenía una mancha de sal en una esquina. El segundo, una fecha que Alma no reconoció. En el tercero, su nombre aparecía escrito con la inclinación exacta de la letra de su madre. No abrió ninguno. Todavía no.</p>
+      </article>
+      <article class="reader-panel" data-reader="4">
+       <p data-template-id="reader-number-4" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Capítulo 04</p>
+       <h2 data-template-id="reader-title-4" class="canva-text display-font mt-4" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">La habitación azul</h2>
+       <div class="my-9 h-px w-16 bg-[#9C4A35]"></div>
+       <p data-template-id="reader-text-4" class="canva-text display-font max-w-2xl leading-[1.9]" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.9;">La puerta cedió con un suspiro. La habitación azul no parecía abandonada: la cama estaba hecha, las cortinas respiraban con el viento y sobre la mesa descansaba una taza con una marca reciente de lápiz labial.</p>
+      </article>
+      <article class="reader-panel" data-reader="5">
+       <p data-template-id="reader-number-5" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Capítulo 05</p>
+       <h2 data-template-id="reader-title-5" class="canva-text display-font mt-4" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">Donde termina el muelle</h2>
+       <div class="my-9 h-px w-16 bg-[#9C4A35]"></div>
+       <p data-template-id="reader-text-5" class="canva-text display-font max-w-2xl leading-[1.9]" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.9;">El mar estaba quieto, demasiado quieto para esa hora. Tomás apoyó los codos en la madera húmeda y habló sin mirarla. Dijo que algunas historias no se pierden: se quedan esperando a que alguien tenga el valor de regresar.</p>
+      </article>
+      <article class="reader-panel" data-reader="6">
+       <p data-template-id="reader-number-6" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Capítulo 06</p>
+       <h2 data-template-id="reader-title-6" class="canva-text display-font mt-4" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">Las luces del faro</h2>
+       <div class="my-9 h-px w-16 bg-[#9C4A35]"></div>
+       <p data-template-id="reader-text-6" class="canva-text display-font max-w-2xl leading-[1.9]" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.9;">Cuando el faro encendió su primera luz, toda la casa tembló apenas. Alma volvió a la ventana. En el reflejo del vidrio, detrás de su hombro, una silueta levantó una mano como quien saluda desde muy lejos.</p>
+      </article>
+      <div class="reader-controls mt-14 flex items-center justify-between gap-4 border-t border-[#2B2420]/45 pt-7">
+       <button data-template-id="previous-chapter-button" id="previous-chapter" type="button" class="canva-button focus-ring inline-flex items-center gap-2 rounded-full border border-[#9C4A35] px-5 py-3 text-xs font-bold uppercase tracking-[.1em] transition hover:bg-[#9C4A35] hover:text-[#F4EBDC]" style="background: transparent; color: rgb(156, 74, 53); font-weight: 700;"><i data-lucide="arrow-left" class="h-4 w-4"></i><span data-template-id="previous-chapter-label" class="canva-text" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Capítulo anterior</span></button> <a data-template-id="next-chapter-button" id="next-chapter" href="#next-qr-notice" class="canva-button focus-ring inline-flex items-center gap-2 rounded-full px-5 py-3 text-xs font-bold uppercase tracking-[.1em] transition hover:bg-[#2B2420]" style="background: rgb(156, 74, 53); color: rgb(244, 235, 220); font-weight: 700;"><i data-lucide="arrow-right" class="h-4 w-4"></i><span data-template-id="next-chapter-label" class="canva-text" style="color: rgb(244, 235, 220); font-weight: 700; font-style: normal; font-size: 18px;">Siguiente capítulo</span></a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="next-qr-notice" data-template-id="next-qr-notice" class="canva-section px-5 py-10 text-center md:px-10" style="background: rgb(244, 235, 220);">
+    <p data-template-id="next-qr-notice-text" class="canva-text mx-auto max-w-xl text-sm leading-relaxed" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px;">El recorrido todavía se está armando. Cada capítulo tiene su propio QR, escondido en un punto distinto de la ciudad — vas a encontrar la pista del siguiente en el flyer que ya escaneaste :)</p>
+   </section>
+   <section id="sobre" data-template-id="about-section" class="about-section canva-section py-20 md:py-28" style="background: rgb(244, 235, 220);">
+    <div class="about-layout mx-auto grid max-w-7xl grid-cols-[.9fr_1.1fr] gap-12 px-5 md:px-10">
+     <div>
+      <p data-template-id="about-kicker" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Detrás de la historia</p>
+      <h2 data-template-id="about-title" class="canva-text display-font mt-4" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">Sobre la novela</h2><img data-template-id="author-image" loading="lazy" class="canva-image mt-10 aspect-[4/5] w-full max-w-sm border border-[#2B2420]/35 object-cover grayscale" src="canva://MAHUp-3cWFE/1" alt="pexels-sara-er-734725946-18656863.jpg">
+     </div>
+     <div class="flex flex-col justify-end">
+      <p data-template-id="about-synopsis" class="canva-text display-font max-w-2xl leading-[1.7]" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.7;">Acantilado es una historia sobre la luz y la oscuridad, sobre el duelo y la culpa que crecen con los años. Entre cartas al viento y una búsqueda para el diario, Iris termina encontrando en East Dean mucho más que a ella misma.</p>
+      <dl class="mt-12 grid gap-7 border-y border-[#2B2420]/35 py-8 sm:grid-cols-2">
+       <div>
+        <dt data-template-id="genre-label" class="canva-text text-[10px] font-bold uppercase tracking-[.18em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Género</dt>
+        <dd data-template-id="genre-value" class="canva-text mt-2 text-sm" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px;">Ficción contemporánea · Drama íntimo</dd>
+       </div>
+       <div>
+        <dt data-template-id="themes-label" class="canva-text text-[10px] font-bold uppercase tracking-[.18em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Temas</dt>
+        <dd data-template-id="themes-value" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.55;">Memoria, amor, amistad, duelo, lugares que nos transforman y la posibilidad de comenzar otra vez.</dd>
+       </div>
+      </dl>
+      <div class="mt-10 border border-[#9483A6] p-6">
+       <p data-template-id="author-note-label" class="canva-text text-[10px] font-bold uppercase tracking-[.18em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Nota de la autora</p>
+       <p data-template-id="author-note" class="canva-text display-font mt-3 max-w-xl italic leading-relaxed" style="color: rgb(43, 36, 32); font-weight: 400; font-style: italic; font-size: 18px; line-height: 1.6;">Mi nombre es Abril Novoa, tengo 27 años. Un gusto!
+
+Escribo esta novela como quien deja una luz encendida en una casa vacía.</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="contacto" data-template-id="contact-section" class="contact-section canva-section py-20" style="background: rgb(244, 235, 220);">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[.9fr_1.1fr] md:px-10">
+     <div>
+      <p data-template-id="contact-kicker" class="canva-text text-xs font-bold uppercase tracking-[.2em]" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Carta a la autora</p>
+      <h2 data-template-id="contact-title" class="canva-text display-font mt-4" style="color: rgb(43, 36, 32); font-weight: 600; font-style: normal; font-size: 27px;">Gracias por leerme :)</h2>
+      <div class="mt-5 max-w-xl text-sm leading-relaxed">
+       <p data-template-id="contact-greeting" class="canva-text" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">Hola!</p>
+       <p data-template-id="contact-intro" class="canva-text mt-4" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">Sería un honor que compartieras una impresión, una pregunta o un fragmento de esta historia que haya quedado en tu corazón. Tu lectura también forma parte de este mundo.</p>
+       <p data-template-id="contact-divider" class="canva-text my-6 text-center" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">***</p>
+       <p data-template-id="contact-journey" class="canva-text italic" style="color: rgb(43, 36, 32); font-weight: 400; font-style: italic; font-size: 18px; line-height: 1.6;">Si llegaste hasta acá, además, caminaste un pedacito de la ciudad detrás de esta historia. Eso, para mí, ya es un regalo que no sé cómo devolver del todo. Contame que hiciste el recorrido completo: cuando Acantilado se publique, diez de las personas que llegaron hasta el final van a recibir un ejemplar firmado por mí, como agradecimiento por haber creído en esta locura conmigo.</p>
+       <p data-template-id="contact-closing" class="canva-text mt-5" style="color: rgb(43, 36, 32); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">Gracias por leer. Gracias por caminar. Gracias por creer en Acantilado :)</p>
+      </div>
+     </div>
+     <form id="contact-form" class="rounded-sm border border-[#2B2420]/25 bg-[#F4EBDC] p-7 shadow-sm md:p-9">
+      <div class="grid gap-5 sm:grid-cols-2">
+       <div><label data-template-id="name-label" class="canva-text mb-2 block text-xs font-bold uppercase tracking-[.12em]" for="reader-name" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Tu Nombre</label><input id="reader-name" required="" type="text" class="focus-ring w-full border-b border-[#2B2420]/55 bg-transparent px-0 py-3 text-sm text-[#2B2420] outline-none transition focus:border-[#9C4A35]">
+       </div>
+      </div>
+      <div class="mt-6"><label data-template-id="message-label" class="canva-text mb-2 block text-xs font-bold uppercase tracking-[.12em]" for="reader-message" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Tu Mensaje</label><textarea id="reader-message" required="" rows="4" class="focus-ring w-full resize-none border-b border-[#2B2420]/55 bg-transparent px-0 py-3 text-sm leading-relaxed text-[#2B2420] outline-none transition focus:border-[#9C4A35]"></textarea>
+      </div>
+      <div class="mt-6"><label data-template-id="feedback-label" class="canva-text mb-2 block text-xs font-bold uppercase tracking-[.12em]" for="chapter-feedback" style="color: rgb(156, 74, 53); font-weight: 700; font-style: normal; font-size: 18px;">Comentario sobre el Capítulo</label><textarea id="chapter-feedback" rows="2" class="focus-ring w-full resize-none border-b border-[#2B2420]/55 bg-transparent px-0 py-3 text-sm leading-relaxed text-[#2B2420] outline-none transition focus:border-[#9C4A35]"></textarea>
+      </div>
+      <div class="mt-7 flex flex-wrap items-center gap-4"><button data-template-id="contact-submit" id="contact-submit" type="submit" class="canva-button focus-ring rounded-full px-6 py-3 text-xs font-bold uppercase tracking-[.12em] transition hover:-translate-y-0.5 hover:bg-[#2B2420] hover:shadow-lg" style="background: rgb(156, 74, 53); color: rgb(244, 235, 220); font-weight: 700; font-style: normal; font-size: 18px;">Enviar Carta</button>
+       <p id="form-status" class="text-sm text-[#2B2420]" aria-live="polite"></p>
+      </div>
+     </form>
+    </div>
+   </section>
+  </main>
+  <footer data-template-id="site-footer" class="site-footer canva-footer px-5 py-9 md:px-10" style="background: rgb(156, 74, 53);">
+   <div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-center">
+    <div>
+     <p data-template-id="footer-name" class="canva-text display-font" style="color: rgb(244, 235, 220); font-weight: 500; font-style: normal; font-size: 20px;">Acantilado</p>
+     <p data-template-id="footer-copyright" class="canva-text mt-2 text-xs" style="color: rgb(244, 235, 220); font-weight: 400; font-style: normal; font-size: 18px;">© 2026. Todos los derechos reservados.</p>
+    </div>
+    <div class="flex flex-wrap gap-5 text-xs font-semibold uppercase tracking-[.12em]"><a data-template-id="social-instagram" class="canva-link focus-ring inline-flex items-center gap-2 transition hover:text-white" href="https://www.instagram.com/abby.music_?stkn=MTFzeTU2NTV5dGdyeg==" target="_blank" rel="noopener noreferrer" style="color: rgb(244, 235, 220); font-weight: 600;"><i data-lucide="instagram" aria-hidden="true" class="h-3.5 w-3.5"></i><span data-template-id="social-instagram-label" class="canva-text" style="color: rgb(244, 235, 220); font-weight: 600; font-style: normal; font-size: 18px;">INSTAGRAM</span></a>
+    </div>
+   </div>
+  </footer>
+  <script src="/_sdk/19fb35948abd980a.editing_sdk.js" integrity="sha512-DDNgw76Zd1mcogJdZu1Q08t7qq/ye0UrrxgjUx+RsorIA6PWkg9ctny4b4xj5in/fJp6WW7KcBtlnAKmQM6bgQ=="></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      let currentChapter = 1, storageReady = false, recordCount = 0;
+      const panels = document.querySelectorAll(".reader-panel");
+      const form = document.getElementById("contact-form");
+      const submitButton = document.getElementById("contact-submit");
+      const formStatus = document.getElementById("form-status");
+
+      function showChapter(chapter, shouldScroll) {
+        currentChapter = Math.max(1, Math.min(1, chapter));
+        panels.forEach(panel => panel.classList.toggle("is-active", Number(panel.dataset.reader) === currentChapter));
+        if (shouldScroll) document.getElementById("lector").scrollIntoView({ behavior:"smooth", block:"start" });
+      }
+
+      function showUnlockMessage() {
+        document.getElementById("next-qr-notice").scrollIntoView({ behavior:"smooth", block:"center" });
+      }
+
+      document.querySelectorAll(".chapter-open").forEach(button => button.addEventListener("click", () => {
+        const chapter = Number(button.dataset.chapter);
+        if (chapter === 1) showChapter(1, true);
+        else showUnlockMessage();
+      }));
+      document.getElementById("read-first").addEventListener("click", () => showChapter(1, true));
+      document.getElementById("previous-chapter").addEventListener("click", () => showChapter(currentChapter - 1, true));
+      document.getElementById("reading-mode-toggle").addEventListener("click", () => document.body.classList.toggle("reading-mode"));
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      function closeMobileMenu() {
+        mobileMenu.classList.add("hidden");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+        mobileMenuToggle.setAttribute("aria-label", "Abrir menú de navegación");
+      }
+      mobileMenuToggle.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("hidden") === false;
+        mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+        mobileMenuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación");
+      });
+      mobileMenu.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMobileMenu));
+
+      const dataHandler = { onDataChanged(data) { recordCount = data.length; } };
+
+      async function initializeStorage() {
+        const result = await window.dataSdk.init(dataHandler);
+        storageReady = result.isOk;
+        if (!result.isOk) formStatus.textContent = "No se pudo preparar el envío. Inténtalo nuevamente.";
+      }
+      initializeStorage();
+
+      form.addEventListener("submit", async event => {
+        event.preventDefault();
+        if (!storageReady) { formStatus.textContent = "El formulario aún se está preparando. Inténtalo en unos segundos."; return; }
+        if (recordCount >= 999) { formStatus.textContent = "Se alcanzó el límite de mensajes. Vuelve a intentarlo más tarde."; return; }
+
+        submitButton.disabled = true;
+        submitButton.classList.add("opacity-60", "cursor-not-allowed");
+        formStatus.textContent = "Enviando tu carta…";
+
+        const result = await window.dataSdk.create({
+          reader_name: document.getElementById("reader-name").value.trim(),
+          message: document.getElementById("reader-message").value.trim(),
+          chapter_feedback: document.getElementById("chapter-feedback").value.trim(),
+          created_at: new Date().toISOString()
+        });
+
+        submitButton.disabled = false;
+        submitButton.classList.remove("opacity-60", "cursor-not-allowed");
+        if (result.isOk) { form.reset(); formStatus.textContent = "Gracias. Tu carta llegó a la autora."; }
+        else formStatus.textContent = "No pudimos enviar tu carta. Inténtalo nuevamente.";
+      });
+    });
+  </script>
+ 
+</body></html>
