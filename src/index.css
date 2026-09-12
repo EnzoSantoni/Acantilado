@@ -17,6 +17,8 @@
     --animate-reveal: rise 0.7s ease both;
     --animate-page-in: pageIn 0.45s ease both;
 
+    --spacing-header: 6.75rem;
+
     @keyframes rise {
       from { opacity: 0; transform: translateY(18px); }
       to { opacity: 1; transform: translateY(0); }
@@ -27,3 +29,10 @@
       to { opacity: 1; transform: translateY(0); }
     }
   }
+
+  @layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
