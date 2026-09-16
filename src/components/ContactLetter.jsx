@@ -17,7 +17,7 @@ export default function ContactLetter() {
             <p className="mt-5">{`Gracias por leer. Gracias por caminar. Gracias por creer en Acantilado :)`}</p>
           </div>
         </div>
-        <form className="rounded-xs border border-tinta/25 bg-papel p-9 shadow-xs md:p-11">
+        <form className="rounded-xs border border-tinta/25 bg-papel p-9 shadow-xs md:p-11" onSubmit={(e) => e.preventDefault()}>
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="mt-2">
               <label htmlFor="reader-name" className={labelStyle}>Tu Nombre</label>

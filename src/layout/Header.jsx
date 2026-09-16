@@ -30,7 +30,7 @@ export default function Header() {
                             <BookOpen className="size-4" />
                         </a>
                 </div>
-                <nav className={`${ active ? "translate-y-0 opacity-100 visible" : "-translate-y-27 opacity-0 pointer-events-none"} flex flex-col px-5 pt-4 pb-4 gap-4 md:px-10 border-b border-bordo lg:hidden absolute top-full left-0 bg-papel w-full -z-1 justify-center items-center transition duration-200 uppercase tracking-[.13em]`} id="mobile-menu" aria-label="Menú móvil">
+                <nav className={`${ active ? "translate-y-0 opacity-100 visible" : "-translate-y-header opacity-0 pointer-events-none"} flex flex-col px-5 pt-4 pb-4 gap-4 md:px-10 border-b border-bordo lg:hidden absolute top-full left-0 bg-papel w-full -z-1 justify-center items-center transition duration-200 uppercase tracking-[.13em]`} id="mobile-menu" aria-label="Menú móvil">
                     {navLinks.map(l => {
                         return <a href={l.href} className={`${linkMobile} ${foco}`} onClick={() => setActive(false)} key={l.label}>{l.label}</a>
                     })}

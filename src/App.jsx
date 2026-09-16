@@ -12,6 +12,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route index element={<NovelPage />}/>
           <Route path='/capitulo/:numero' element={<NovelPage />}/>
+          <Route path='*' element={<NovelPage />} />
         </Route>
       </Routes>
     </>

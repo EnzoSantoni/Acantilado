@@ -12,7 +12,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-wrap gap-5 leading-4 font-semibold uppercase tracking-[.12em]">
           <a href="https://www.instagram.com/abby.music_?stkn=MTFzeTU2NTV5dGdyeg==" className="inline-flex items-center gap-2 font-semibold text-papel transition 
-          focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bordo" target="blank" rel="noopener noreferrer">
+          focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bordo" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} className="text-[14px]" />
             INSTAGRAM
             </a>
