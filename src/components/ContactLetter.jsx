@@ -1,7 +1,32 @@
-
+import axios from "axios"
+import { useState } from "react";
 
 export default function ContactLetter() {
   const labelStyle = "mb-3 block text-[18px] leading-4 font-bold uppercase tracking-[.12em] text-bordo"
+  const [ estado, setEstado ] = useState('inicial')
+  const mensajes = {
+    inicial: '',
+    enviando: 'Enviando tu carta…',
+    enviado: 'Gracias. Tu carta llegó a la autora.',
+    error: 'No pudimos enviar tu carta. Inténtalo nuevamente.',
+  }
+
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    const form = evt.target;
+
+    setEstado('enviando')
+    axios.post('/', new URLSearchParams( new FormData(form)))
+      .then(() => {
+        setEstado('enviado');
+        form.reset()
+      })
+      .catch(() => {
+        setEstado('error')
+      })
+  }
+
 
   return (
     <section id="contacto" className="bg-papel py-20 font-display font-semibold">
@@ -17,7 +42,9 @@ export default function ContactLetter() {
             <p className="mt-5">{`Gracias por leer. Gracias por caminar. Gracias por creer en Acantilado :)`}</p>
           </div>
         </div>
-        <form className="rounded-xs border border-tinta/25 bg-papel p-9 shadow-xs md:p-11" onSubmit={(e) => e.preventDefault()}>
+        <form className="rounded-xs border border-tinta/25 bg-papel p-9 shadow-xs md:p-11" onSubmit={handleSubmit}>
+        <input type="hidden" name="form-name" value="carta" />
+        <input type="text" name="bot-field" hidden/>
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="mt-2">
               <label htmlFor="reader-name" className={labelStyle}>Tu Nombre</label>
@@ -33,10 +60,10 @@ export default function ContactLetter() {
               <textarea name="chapter-feedback" id="chapter-feedback" rows={2} className="w-full resize-none border-b border-tinta/55 bg-transparent px-2 py-3 text-sm leading-relaxed text-tinta outline-hidden transition focus:border-bordo"></textarea>
             </div>
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <button type="submit" className="rounded-full bg-bordo px-6 py-4 text-[18px] leading-4 font-bold uppercase tracking-[.12em] text-papel transition hover:-translate-y-0.5 hover:bg-tinta hover:shadow-lg">
+              <button type="submit" className="rounded-full bg-bordo px-6 py-4 text-[18px] leading-4 font-bold uppercase tracking-[.12em] text-papel transition hover:-translate-y-0.5 hover:bg-tinta hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed" disabled={estado === 'enviando'}>
                 Enviar Carta
               </button>
-              <p aria-live="polite" className="text-sm text-tinta"></p>
+              <p aria-live="polite" className="text-sm text-tinta">{mensajes[estado]}</p>
             </div>
         </form>
       </div>

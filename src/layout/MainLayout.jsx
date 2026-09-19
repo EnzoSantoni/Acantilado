@@ -4,11 +4,13 @@ import Footer from "./Footer";
 
 
 export default function MainLayout() {
+
+
     return (
-        <div className="min-h-screen overflow-x-clip bg-papel text-tinta transition-colors duration-500 ease-[ease]"> 
+        <div className={`min-h-screen overflow-x-clip bg-papel text-tinta transition-colors duration-500 ease-[ease]`}> 
             <Header />
 
-            <main className="">
+            <main>
                 <Outlet />
             </main>
 

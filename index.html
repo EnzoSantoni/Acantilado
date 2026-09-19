@@ -8,6 +8,13 @@
     
   </head>
   <body>
+    <form name="carta" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field">
+      <input type="text" name="reader-name" />
+      <textarea name="reader-message"></textarea>
+      <textarea name="chapter-feedback"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
