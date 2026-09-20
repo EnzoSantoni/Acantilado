@@ -9,9 +9,10 @@ export default function Footer() {
         <div className="flex flex-col gap-2">
           <span className="font-display text-xl font-medium text-papel">Acantilado</span>
           <span className="mt-2 text-[18px] leading-4 font-normal text-papel"><span className="text-black ">©</span> 2026. Todos los derechos reservados.</span>
+          <p className='mt-3 text-[18px] text-papel/60'>Sitio desarrollado por <a href="https://www.linkedin.com/in/enzosantoni/" className='underline-offset-4 transition hover:text-papel hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-papel' target='_blank' rel='noreferrer noopener'>Enzo Santoni</a></p>
         </div>
         <div className="flex flex-wrap gap-5 leading-4 font-semibold uppercase tracking-[.12em]">
-          <a href="https://www.instagram.com/abby.music_?stkn=MTFzeTU2NTV5dGdyeg==" className="inline-flex items-center gap-2 font-semibold text-papel transition 
+          <a href="https://www.instagram.com/abby.escritora_acantilado?stkn=MTJ1bmtuOXprcTBlaw==" className="inline-flex items-center gap-2 font-semibold text-papel transition 
           focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bordo" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} className="text-[14px]" />
             INSTAGRAM

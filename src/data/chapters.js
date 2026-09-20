@@ -1,5 +1,12 @@
+import imgCap1 from "../assets/img/img-acantilado-cap1.jpeg"
+import imgCap2 from "../assets/img/img-acantilado-cap2.jpeg"
+import imgCap3 from "../assets/img/img-acantilado-cap3.jpeg"
+import imgCap4 from "../assets/img/img-acantilado-cap4.jpeg"
+import imgCap5 from "../assets/img/img-acantilado-cap5.jpeg"
+import imgCap6 from "../assets/img/img-acantilado-cap6.jpeg"
+
 export const chapters = [
-    {numero: 1, slug: '', titulo: 'El efecto del observador', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `Hay una teoría físico-cuántica llamada "El Efecto del Observador", y habla de que el Universo se rige por infinitas posibilidades coexistiendo solapadas al mismo tiempo.
+    {numero: 1, slug: '', img: imgCap1,  titulo: 'El efecto del observador', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `Hay una teoría físico-cuántica llamada "El Efecto del Observador", y habla de que el Universo se rige por infinitas posibilidades coexistiendo solapadas al mismo tiempo.
 Eugene Wigner decía que es como si el Universo tuviera muchas versiones posibles de una misma historia, y que solo cuando alguien observa, él elige una de las opciones del guion y la realidad se concreta. En pocas palabras, que el mundo no está definido hasta que alguien lo experimenta.
 
 A los 18 años aprendí que tenemos la posibilidad de alterar la percepción de la realidad al tomar drogas, y que podemos inducir al cerebro a oler un color o a escuchar una imagen. Entonces por un momento, todas esas versiones y mundos diferentes parecen crearse, distorsionarse y mezclarse entre sí. 
@@ -56,7 +63,7 @@ Seguí avanzando hasta que mis piernas se hicieron débiles y no pude sostener e
 
 Me desplomé.
 `},
-    {numero: 2, slug: '', titulo: 'La luz puede susurrarte historias', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.',  parrafos: `Hace unos años, un lunes por la mañana salía de la editorial del diario para el que trabajaba —Ash & Papers— hacia la estación del metro. Iba de Londres a Richmond. Llegué al andén con el bolso lleno de preguntas y una entrevista para las once con Estelle Burrows, sobrina de un excombatiente de la Primera Guerra Mundial, Audrey Paul.
+    {numero: 2, slug: '', img: imgCap2,  titulo: 'La luz puede susurrarte historias', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.',  parrafos: `Hace unos años, un lunes por la mañana salía de la editorial del diario para el que trabajaba —Ash & Papers— hacia la estación del metro. Iba de Londres a Richmond. Llegué al andén con el bolso lleno de preguntas y una entrevista para las once con Estelle Burrows, sobrina de un excombatiente de la Primera Guerra Mundial, Audrey Paul.
 
 Era una mañana transcurrida, el transporte funcionaba con algo de retraso, y por una mezcla del calor que hacía ese día junto con la velocidad de la unidad arrastrándose por las vías al llegar, el helado de un niño cayó justo a centímetros de mis zapatos nuevos. Lo que me hizo suspirar antes de subirme.
 
@@ -120,7 +127,7 @@ Algunos meses después de ese día pedí una pizza doble de queso un sábado por
 Sonreí. Habrá sido una sonrisa grande. Cuando levantó el casco pude ver que su cabello había crecido bastante, tenía algunos rulos desarmados.
 
 Tuve agendado a Owen incluso mucho tiempo después de nuestra primera cita como "El pasajero".`},
-    {numero: 3, slug: '', titulo: 'Tal vez volvamos a vernos', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `Desperté con el mismo flash de luz en el acantilado, y el reflejo de mi mano cubriendo mis ojos. Lentamente llegó a mi nariz una mezcla de alcohol etílico con jazmín. Sentí frío, un frío diferente, del tipo que no viene del aire sino de la soledad de ciertas habitaciones.
+    {numero: 3, slug: '', img: imgCap3,  titulo: 'Tal vez volvamos a vernos', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `Desperté con el mismo flash de luz en el acantilado, y el reflejo de mi mano cubriendo mis ojos. Lentamente llegó a mi nariz una mezcla de alcohol etílico con jazmín. Sentí frío, un frío diferente, del tipo que no viene del aire sino de la soledad de ciertas habitaciones.
 
 Mis ojos pesaban, y en cuanto pude abrirlos lo hice con desconfianza. Me sentía suspendida, como si hubiese saltado por ese acantilado pero siguiera atrapada en la caída. Aun así, el techo blanco fue lo primero que vi. No había estrellas, tampoco esa luz. Solo un ambiente tenue de luces bajas con un silencio abrumador.
 
@@ -167,7 +174,7 @@ Abrí mis ojos, pero solo llegué a ver su silueta acercando un carrito metálic
 Volví a cerrar los ojos sin cuestionar la situación, y esa luz volvió a mi mente como en olas, mezclada con el flash de las linternas en el vagón del metro con Owen. Y sacudir mi cabeza no logró hacerlo desaparecer.
 
 Me quedé en el hospital con los sentidos y las luces apagadas, mientras el monitor siguió marcando mi ritmo cardíaco.`},
-    {numero: 4, slug: '', titulo: 'El chirrido que hacen las ruedas de un avión huele a lavanda', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `La madrugada en que Kaelin volvió a Londres después de su único año en la universidad, me animé a probar una pastilla, un poco en su honor, un poco para poder sostenerme. Por primera vez, algo externo alteraba mi percepción del mundo.
+    {numero: 4, slug: '', img: imgCap4,  titulo: 'El chirrido que hacen las ruedas de un avión huele a lavanda', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `La madrugada en que Kaelin volvió a Londres después de su único año en la universidad, me animé a probar una pastilla, un poco en su honor, un poco para poder sostenerme. Por primera vez, algo externo alteraba mi percepción del mundo.
 
 Las ruedas de su avión chirriaron con violencia contra el asfalto del aeropuerto al llegar. Luego, el viento trajo su perfume a lavanda apagado, disperso entre millones de partículas de oxígeno que lo redujeron a un soplido fugaz. Miré el reloj en mi muñeca y temblaba tanto que los números eran un par de figuras borrosas que no reconocía. Y cuando las figuras a mi alrededor también empezaron a deformarse y me asusté, de alguna forma ya era el día siguiente.
 
@@ -182,7 +189,7 @@ Desde entonces el LSD nunca me dejó; esa sensación de que todo está conectado
 Con el tiempo me convencí de que esa es la razón por la que morimos. Morimos cuando ya no queda espacio para más marcas en nuestras células sin que empiece a haber errores en todo el sistema. Así que me propuse escribirlo. Dejarle la responsabilidad a unas cuantas letras de mostrar la forma en que las cosas pasan, en que las cosas nos suceden, se entrelazan y que no registramos. Al menos no de forma consciente.
 
 Conseguí trabajo en un diario local que buscaba a un "periodista con fines literarios". Les mostré mis escritos y les dije que me apasionaban las historias. Así que me contrataron.`},
-    {numero: 5, slug: '', titulo: 'El tejo', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `La mañana que me dieron el alta, las llaves de mi coche efectivamente estaban en el armario de la habitación, junto con la ropa que llevaba puesta esa noche. Tomé la chaqueta azul de Owen y la pegué a mi rostro en vano, como cada vez, intentando sentirlo.
+    {numero: 5, slug: '', img: imgCap5,  titulo: 'El tejo', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `La mañana que me dieron el alta, las llaves de mi coche efectivamente estaban en el armario de la habitación, junto con la ropa que llevaba puesta esa noche. Tomé la chaqueta azul de Owen y la pegué a mi rostro en vano, como cada vez, intentando sentirlo.
 
 Pasé por varias puertas cerradas y otras abiertas en el pasillo del hospital, batas blancas apuradas y dos adolescentes tratando de inclinar la máquina expendedora para ganarse unas patatas gratis. Pensé en que lo único que no varía en esos lugares es ese olor a químicos y productos de limpieza que parece estar adherido a la pintura de las paredes.
 
@@ -249,7 +256,7 @@ Tomé el móvil y empecé a buscar información sobre el tejo:
 
 Guardé la hoja en el folio de una de mis carpetas de trabajo.
 `},
-    {numero: 6, slug: '', titulo: 'Puentes entre la vida y la muerte', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `Esa noche dormí poco. Afuera el viento inhalaba y exhalaba desgarrándose contra los acantilados, como un inmenso pulmón.
+    {numero: 6, slug: '', img: imgCap6,  titulo: 'Puentes entre la vida y la muerte', nota: 'Si completás este recorrido, hay algo más esperándote al final. Te lo cuento en la carta, más abajo.', parrafos: `Esa noche dormí poco. Afuera el viento inhalaba y exhalaba desgarrándose contra los acantilados, como un inmenso pulmón.
 
 Con la primera luz cálida del día, el otoño me saludó desde la ventana con su traje color miel. La chaqueta colgaba detrás de la puerta como un fantasma, así que, sin pensarlo mucho, la calcé sobre mis hombros y salí con la hoja del tejo en el bolsillo.
 

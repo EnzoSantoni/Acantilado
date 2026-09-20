@@ -56,10 +56,10 @@ export default function NovelPage() {
 
     return (
         <div className="flex flex-col"> 
-            <Hero onOpenChapter={openChapter} />
+            <Hero onOpenChapter={openChapter} currentChapter={currentChapter} />
             <ChapterIndex  unlockedUpTo={unlockedUpTo} onOpenChapter={openChapter}/>
             <Reader  currentChapter={currentChapter} onOpenChapter={openChapter}/>
-            <NextQrNotice />
+            <NextQrNotice currentChapter={currentChapter} />
             <About />
             <ContactLetter />
         </div>

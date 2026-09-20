@@ -1,9 +1,10 @@
 import { ArrowDownRight } from "lucide-react"
-import acantiladoImg from "../assets/img/img-acantilado.jpg"
+import { chapters } from "../data/chapters"
 
 
-export default function Hero({ onOpenChapter }) {
+export default function Hero({ onOpenChapter, currentChapter }) {
     const foco = 'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bordo'
+    const chapter = chapters.find(ch => ch.numero === currentChapter)
 
     return (
         <section id="inicio" className="overflow-hidden bg-papel font-display">
@@ -21,8 +22,8 @@ export default function Hero({ onOpenChapter }) {
                         <a className={`text-[18px] leading-4 font-bold uppercase tracking-[.14em] text-bordo no-underline ${foco}`} href="#next-qr-notice">Ubicación de QR</a>
                     </div>
                 </div>
-                <div className="relative my-7 overflow-hidden rounded-xs border border-tinta/25 md:my-10">
-                    <img src={acantiladoImg} alt="Imagen del acantilado" className="h-full min-h-105 w-full object-cover" loading="lazy"/>
+                <div className="relative my-7 h-105 overflow-hidden rounded-xs border border-tinta/25 md:my-10 lg:h-auto">
+                    <img src={chapter.img} alt="Imagen del acantilado" className="absolute inset-0 h-full w-full object-cover"/>
                     <div className="absolute inset-0 bg-linear-to-t from-tinta/65 via-transparent to-transparent">
                         <p className="absolute bottom-5 left-5 text-[18px] leading-4 italic text-papel">Puede haber fantasmas en la luz</p>
                     </div>
