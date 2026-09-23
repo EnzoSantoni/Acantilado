@@ -33,11 +33,11 @@ export default function Reader({currentChapter, onOpenChapter}) {
                                 if(texto === '***') {
                                     return  <p className='text-center text-[18px] text-bordo' key={i}>{texto}</p>
                                 } if (texto.startsWith('**') && texto.endsWith('**')) {
-                                    return <p className="whitespace-pre-line font-display text-[18px] leading-[1.9] text-tinta font-bold">{texto.slice(2,-2)}</p>
+                                    return <p className="whitespace-pre-line font-display text-[18px] leading-[1.9] text-tinta font-bold"  key={i}>{texto.slice(2,-2)}</p>
                                 } if (texto.startsWith(`*`) && texto.endsWith('*')) {
-                                    return <p className="whitespace-pre-line font-display text-[18px] leading-[1.9] text-tinta italic">{texto.slice(1,-1)}</p>
+                                    return <p className="whitespace-pre-line font-display text-[18px] leading-[1.9] text-tinta italic" key={i}>{texto.slice(1,-1)}</p>
                                 } else {
-                                    return <p className="whitespace-pre-line font-display text-[18px] leading-[1.9] text-tinta">{texto}</p>
+                                    return <p className="whitespace-pre-line font-display text-[18px] leading-[1.9] text-tinta" key={i}>{texto}</p>
                                 }
                             })}
                         </div>
