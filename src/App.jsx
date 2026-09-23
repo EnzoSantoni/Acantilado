@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router'
-import './App.css'
 import MainLayout from './layout/MainLayout'
-import NovelPage from './page/NovelPage'
+import NovelPage from './pages/NovelPage'
 
 
 function App() {
